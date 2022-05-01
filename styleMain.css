@@ -15,12 +15,6 @@ body {
     height: 100vh;
 }
 
-main {
-    display: grid;
-    grid-template-rows: 50vh 50vh;
-
-}
-/* NavBar*/
 nav {
     display: inline-block;
     height: 15vh;
@@ -34,10 +28,9 @@ nav ul {
 
 nav ul li {
     float: left;
-    width: 30%;
+    width: 25%;
     text-align: center;
-    background-color: rgba(255, 217, 0, 0.231);
-    text-shadow: 2px 2px 2px black;
+    position: relative;
 }
 
 nav ul::after {
@@ -49,7 +42,7 @@ nav ul::after {
 nav a {
     display: block;
     text-decoration: none;
-    color: white;
+    color: gold;
     border-bottom: 2px solid transparent;
     padding: 10px 0px;
 }
@@ -86,37 +79,28 @@ nav > ul li:hover .sousmenu {
 }
 
 .deroulant {
-    font-size: 1.5rem;
+    margin-top: 10px;
+    /* content: " ▼"; */
+    /* font-size: 12px; */
 }
 /* end */
 
-section {
-    grid-row-start: 2;
-    width: 80vw;
-    margin: auto;
+.logo {
+    height: 36px;
+    width: 100px;
 }
 
-p {
-    font-family: 'Tangerine', cursive, sans-serif;
-    color: gold;
-    font-size: 1.8rem;
-}
+main {
+    display: grid;
+    grid-template-rows: 50vh 50vh;
 
-.teteP {
-    text-indent: 3rem;
-}
-
-.gras {
-    font-weight: bold;
 }
 
 /*tablettes*/
-/* @media (min-width 425px) { */
-/* } */
+@media (min-width 425px) {
 
+}
 /*desktop*/
-@media (min-width: 1024px) {
-    p {
-    font-size: 3rem;
-    }
+@media (min-width 1440px) {
+
 }
