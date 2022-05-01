@@ -1,0 +1,35 @@
+/*Reset*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(./assets/bg.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100vh;
+    height: 100vh;
+}
+
+main {
+    display: flex;
+}
+
+section {
+    width: 80vw;
+    margin: auto;
+    align-items: flex-end;
+}
+
+p {
+    font-family: 'Tangerine', cursive, sans-serif;
+    color: aqua;
+    font-size: 2em;
+}
+
+.gras {
+    font-weight: bold;
+}
