@@ -88,7 +88,19 @@ nav > ul li:hover .sousmenu {
 .deroulant {
     font-size: 1.5rem;
 }
-/* end */
+
+.logo {
+    top:0;
+    right: 0;
+    height: 11vh;
+    width : 33%;
+    position:absolute;
+    }
+
+.imgLogo {
+    height: 11vh;
+    width : 100%;
+}
 
 section {
     grid-row-start: 2;
@@ -110,13 +122,16 @@ p {
     font-weight: bold;
 }
 
-/*tablettes*/
-/* @media (min-width 425px) { */
-/* } */
+tablettes
+@media (min-width 425px) {
+    p {
+        font-size: 2.8rem;
+    }
+}
 
 /*desktop*/
 @media (min-width: 1024px) {
     p {
-    font-size: 3rem;
+        font-size: 3rem;
     }
 }
