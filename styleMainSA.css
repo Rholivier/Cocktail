@@ -23,6 +23,7 @@ header {
     display: grid;
     grid-template-rows: 50vh 50vh;
     background-color: rgba(0, 0, 0, 1);
+    z-index: 500;
 }
 
 .logo {
@@ -31,6 +32,10 @@ header {
     height: 11vh;
     width : 33%;
     position:absolute;
+    background-image: url(./assets/imgLogo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
     }
 
 .imgLogo {
@@ -109,7 +114,8 @@ nav > ul li:hover .sousmenu {
 
 /* CONTENU */
 main {
-    padding-top: 15vh;
+    margin-top: 11vh;
+    padding-top: 10px;
     display: block;
 }
 
@@ -120,7 +126,7 @@ main {
     margin-top: 5vh;
     border-radius: 10px;
     padding: 10px;
-    z-index: 500;
+    z-index: 400;
 }
 
 .pave {
@@ -142,7 +148,6 @@ main {
 #p1 {
     background-color: rgba(255, 0, 255, 0.7);
     border: 2px solid magenta;
-    color: ;
 }
 
 #p2 {
@@ -186,26 +191,31 @@ main {
 }
 
 #p10 {
+    grid-area: p10;
     background-color: rgba(0, 0, 255, 0.7);
     border: 2px solid blue;
 }
 
 #p11 {
+    grid-area: p11;
     background-color: rgba(0, 128, 0, 0.7);
     border: 2px solid green;
 }
 
 #p12 {
+    grid-area: p12;
     background-color: rgba(255, 0, 0, 0.7);
     border: 2px solid red;
 }
 
 #p13 {
+    grid-area: p13;
     background-color: rgba(165, 42, 42, 0.7);
     border: 2px solid brown;
 }
 
 #p14 {
+    grid-area: p14;
     background-color: rgba(128, 0, 128, 0.7);
     border: 2px solid purple;
 }
@@ -229,6 +239,60 @@ h3 {
 
 
 
+/* RESPONSIVE TABLETS */
+@media (min-width: 426px) {
+    main {
+        display: grid;
+        grid-template-areas:
+            "p12 p12 p10 p14"
+            "p12 p12 p10 p13"
+            "p11 p11 p11 p13";
+    }
+    .bg {
+        margin: 10px;
+        height: max-content;
+        width: max-content;
+    }
 
-/* @media (min-width: 425px) {} */
+    .pave {
+        display: block;
+        height: max-content;
+        width: max-content;
+    }
+
+    #p10 .pave {
+        max-height: 200px;
+        max-width: 150px;
+    }
+
+    #p11 .pave {
+        max-height: 100px;
+        max-width: 450px;
+    }
+
+    #p12 .pave {
+        max-height: 200px;
+        max-width: 300px;
+    }
+
+    #p13 .pave {
+        max-height: 200px;
+        max-width: 150px;
+    }
+
+    #p14 .pave {
+        max-height: 100px;
+        max-width: 150px;
+    }
+
+
+    .recette {
+        display : none;
+    }
+
+    p {
+        display : none;
+    }
+/* } */
+
 /* @media (min-width: 1024px) {} */
