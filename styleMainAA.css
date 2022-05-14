@@ -5,14 +5,14 @@
     padding: 0px;
 }
 
-.page {
+body {
     background-image: url(./assets/bg.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     width: 100vw;
-    height: auto;
+    height: 100vh;
 }
 
 header {
@@ -23,23 +23,13 @@ header {
     display: grid;
     grid-template-rows: 50vh 50vh;
     background-color: rgba(0, 0, 0, 1);
+    z-index: 500;
 }
 
-.logo {
-    top:0;
-    right: 0;
-    height: 11vh;
-    width : 33%;
-    position:absolute;
-    background-image: url(./assets/imgLogo.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: right;
-    }
-
-.imgLogo {
-    height: 11vh;
-    width : 100%;
+main {
+    margin-top: 11vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* NAVBAR */
@@ -56,7 +46,7 @@ nav ul {
 
 nav ul li {
     float: left;
-    width: 33%;
+    width: 30%;
     text-align: center;
     background-color: rgba(255, 217, 0, 0.231);
     text-shadow: 2px 2px 2px black;
@@ -111,28 +101,41 @@ nav > ul li:hover .sousmenu {
     font-size: 1.5rem;
 }
 
-/* CONTENU */
-main {
-    margin-top: 11vh;
-    padding-top: 10px;
-    display: block;
+.logo {
+    top:0;
+    right: 0;
+    height: 10vh;
+    width : 33%;
+    position:fixed;
+    background-image: url(./assets/imgLogo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    }
+
+.imgLogo {
+    height: 11vh;
+    width : 100%;
 }
+
+/* CONTENU */
+
 
 /* PAVE GENERIQUE */
 .bg {
-    margin-left: 7vw;
-    margin-right: 7vw;
+    margin-left: 3vw;
+    margin-right: 3vw;
     margin-top: 5vh;
     border-radius: 10px;
     padding: 10px;
-    z-index: 500;
+    z-index: 400;
 }
 
-.pave {
+.paveImg {
     display: none;
 }
 
-.hautPave {
+.liste {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -145,80 +148,64 @@ main {
 
 /* PAVE SPECIFICITES */
 #p1 {
+    grid-area: p1;
     background-color: rgba(255, 0, 255, 0.7);
     border: 2px solid magenta;
 }
 
 #p2 {
+    grid-area: p2;
     background-color: rgba(0, 0, 255, 0.7);
     border: 2px solid blue;
 }
 
 #p3 {
+    grid-area: p3;
     background-color: rgba(0, 100, 0, 0.7);
     border: 2px solid darkgreen;
 }
 
 #p4 {
+    grid-area: p4;
     background-color: rgba(255, 20, 145, 0.7);
     border: 2px solid deeppink;
 }
 
 #p5 {
+    grid-area: p5;
     background-color: rgba(128, 0, 128, 0.7);
     border: 2px solid purple;
 }
 
 #p6 {
+    grid-area: p6;
     background-color: rgba(0, 0, 139, 0.7);
     border: 2px solid darkblue;
 }
 
 #p7 {
+    grid-area: p7;
     background-color: rgba(165, 42, 42, 0.7);
     border: 2px solid brown;
 }
 
 #p8 {
+    grid-area: p8;
     background-color: hsla(0, 100%, 50%, 0.7);
     border: 2px solid red;
 }
 
 #p9 {
+    grid-area: p9;
     background-color: rgba(47, 79, 79, 0.7);
     border: 2px solid darkslategray;
-}
-
-#p10 {
-    background-color: rgba(0, 0, 255, 0.7);
-    border: 2px solid blue;
-}
-
-#p11 {
-    background-color: rgba(0, 128, 0, 0.7);
-    border: 2px solid green;
-}
-
-#p12 {
-    background-color: rgba(255, 0, 0, 0.7);
-    border: 2px solid red;
-}
-
-#p13 {
-    background-color: rgba(165, 42, 42, 0.7);
-    border: 2px solid brown;
-}
-
-#p14 {
-    background-color: rgba(128, 0, 128, 0.7);
-    border: 2px solid purple;
 }
 
 p, h3 {
     font-family: 'Tangerine', cursive, sans-serif;
     color: gold;
     text-shadow: 1px 1px black;
-}
+} 
 
 /* TEXTES */
 p {
@@ -235,13 +222,22 @@ h3 {
 
 /* RESPONSIVE TABLETS */
 /* @media (min-width: 425px) { */
-    /* .bg { */
-        /* display: grid; */
-    /* } */
-
-    /* .pave { */
-        /* display: block; */
-    /* } */
-/* } */
+    @media (min-width: 426px) {
+        main {
+            padding-left: 5px;
+            padding-right: 5px;
+            display: grid;
+           grid-template-areas:
+                "p1 p2 p2 p3"
+                "p5 p2 p2 p4"
+                "p9 p9 p6 p4"
+                "p9 p9 p6 p7"
+                "p8 p8 p6 p7"
+        }
+        
+        .bg {
+            margin-left: 1vw;
+            margin-right: 1vw;
+        }
 
 /* @media (min-width: 1024px) {} */

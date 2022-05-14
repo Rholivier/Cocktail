@@ -5,14 +5,14 @@
     padding: 0px;
 }
 
-.page {
+body {
     background-image: url(./assets/bg.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     width: 100vw;
-    height: auto;
+    height: 100vh;
 }
 
 header {
@@ -26,21 +26,10 @@ header {
     z-index: 500;
 }
 
-.logo {
-    top:0;
-    right: 0;
-    height: 11vh;
-    width : 33%;
-    position:absolute;
-    background-image: url(./assets/imgLogo.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: right;
-    }
-
-.imgLogo {
-    height: 11vh;
-    width : 100%;
+main {
+    margin-top: 11vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* NAVBAR */
@@ -57,7 +46,7 @@ nav ul {
 
 nav ul li {
     float: left;
-    width: 33%;
+    width: 30%;
     text-align: center;
     background-color: rgba(255, 217, 0, 0.231);
     text-shadow: 2px 2px 2px black;
@@ -112,28 +101,41 @@ nav > ul li:hover .sousmenu {
     font-size: 1.5rem;
 }
 
-/* CONTENU */
-main {
-    margin-top: 11vh;
-    padding-top: 10px;
-    display: block;
+.logo {
+    top:0;
+    right: 0;
+    height: 10vh;
+    width : 33%;
+    position:fixed;
+    background-image: url(./assets/imgLogo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    }
+
+.imgLogo {
+    height: 11vh;
+    width : 100%;
 }
+
+/* CONTENU */
+
 
 /* PAVE GENERIQUE */
 .bg {
-    margin-left: 7vw;
-    margin-right: 7vw;
+    margin-left: 3vw;
+    margin-right: 3vw;
     margin-top: 5vh;
     border-radius: 10px;
     padding: 10px;
     z-index: 400;
 }
 
-.pave {
+.paveImg {
     display: none;
 }
 
-.hautPave {
+.liste {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -145,51 +147,6 @@ main {
 }
 
 /* PAVE SPECIFICITES */
-#p1 {
-    background-color: rgba(255, 0, 255, 0.7);
-    border: 2px solid magenta;
-}
-
-#p2 {
-    background-color: rgba(0, 0, 255, 0.7);
-    border: 2px solid blue;
-}
-
-#p3 {
-    background-color: rgba(0, 100, 0, 0.7);
-    border: 2px solid darkgreen;
-}
-
-#p4 {
-    background-color: rgba(255, 20, 145, 0.7);
-    border: 2px solid deeppink;
-}
-
-#p5 {
-    background-color: rgba(128, 0, 128, 0.7);
-    border: 2px solid purple;
-}
-
-#p6 {
-    background-color: rgba(0, 0, 139, 0.7);
-    border: 2px solid darkblue;
-}
-
-#p7 {
-    background-color: rgba(165, 42, 42, 0.7);
-    border: 2px solid brown;
-}
-
-#p8 {
-    background-color: hsla(0, 100%, 50%, 0.7);
-    border: 2px solid red;
-}
-
-#p9 {
-    background-color: rgba(47, 79, 79, 0.7);
-    border: 2px solid darkslategray;
-}
-
 #p10 {
     grid-area: p10;
     background-color: rgba(0, 0, 255, 0.7);
@@ -236,63 +193,21 @@ h3 {
 }
 
 
-
-
-
 /* RESPONSIVE TABLETS */
 @media (min-width: 426px) {
     main {
+        padding-left: 5px;
+        padding-right: 5px;
         display: grid;
-        grid-template-areas:
-            "p12 p12 p10 p14"
-            "p12 p12 p10 p13"
-            "p11 p11 p11 p13";
+       grid-template-areas:
+            "p13 p13 p10 p11"
+            "p13 p13 p10 p12"
+            "p14 p14 p14 p12"
     }
+    
     .bg {
-        margin: 10px;
-        height: max-content;
-        width: max-content;
+        margin-left: 1vw;
+        margin-right: 1vw;
     }
 
-    .pave {
-        display: block;
-        height: max-content;
-        width: max-content;
-    }
-
-    #p10 .pave {
-        max-height: 200px;
-        max-width: 150px;
-    }
-
-    #p11 .pave {
-        max-height: 100px;
-        max-width: 450px;
-    }
-
-    #p12 .pave {
-        max-height: 200px;
-        max-width: 300px;
-    }
-
-    #p13 .pave {
-        max-height: 200px;
-        max-width: 150px;
-    }
-
-    #p14 .pave {
-        max-height: 100px;
-        max-width: 150px;
-    }
-
-
-    .recette {
-        display : none;
-    }
-
-    p {
-        display : none;
-    }
-/* } */
-
-/* @media (min-width: 1024px) {} */
+/* @media (min-width: 1024px) {}*/

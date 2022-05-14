@@ -18,8 +18,8 @@ body {
 main {
     display: grid;
     grid-template-rows: 50vh 50vh;
-
 }
+
 /* NavBar*/
 nav {
     display: inline-block;
@@ -92,9 +92,9 @@ nav > ul li:hover .sousmenu {
 .logo {
     top:0;
     right: 0;
-    height: 11vh;
+    height: 10vh;
     width : 33%;
-    position:absolute;
+    position:fixed;
     background-image: url(./assets/imgLogo.png);
     background-repeat: no-repeat;
     background-size: contain;
@@ -105,6 +105,8 @@ nav > ul li:hover .sousmenu {
     height: 11vh;
     width : 100%;
 }
+
+/* contenu */
 
 section {
     grid-row-start: 2;
@@ -129,13 +131,13 @@ p {
 /* tablettes */
 @media (min-width: 425px) {
     p {
-        font-size: 2.8rem;
+        font-size: 2.7rem;
     }
 }
 
 /*desktop*/
 @media (min-width: 1024px) {
     p {
-        font-size: 3rem;
+        font-size: 3.2rem;
     }
 }
