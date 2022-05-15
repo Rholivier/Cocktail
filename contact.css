@@ -1,0 +1,154 @@
+/*Reset*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(./assets/contact.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+header {
+    position: fixed;
+    top: 0px;
+    height: 11vh;
+    width: 100vw;
+    display: grid;
+    grid-template-rows: 50vh 50vh;
+    background-color: rgba(0, 0, 0, 1);
+    z-index: 500;
+}
+
+main {
+    display: grid;
+    grid-template-rows: 50vh 50vh;
+}
+
+/* NavBar*/
+nav {
+    display: inline-block;
+    height: 15vh;
+    position: sticky;
+    top: 0px;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    float: left;
+    width: 30%;
+    text-align: center;
+    background-color: rgba(17, 0, 255, 0.396);
+    text-shadow: 2px 2px 2px black;
+}
+
+nav ul::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    border-bottom: 2px solid transparent;
+    padding: 10px 0px;
+}
+
+nav a:hover {
+    border-bottom: 2px solid gold;
+}
+
+.sousmenu {
+    display: none;
+    box-shadow: 0px 1px 2px #CCC;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav > ul li:hover .sousmenu {
+    display: block;
+}
+
+.sousmenu li {
+    float: none;
+    width: 100%;
+    text-align: left;
+}
+
+.sousmenu a {
+    padding: 10px;
+    border-bottom: none;
+}
+
+.sousmenu a:hover {
+    border-bottom: none;
+}
+
+.deroulant {
+    font-size: 1.5rem;
+}
+
+.logo {
+    top:0;
+    right: 0;
+    height: 10vh;
+    width : 33%;
+    position:fixed;
+    background-image: url(./assets/imgLogo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    }
+
+.imgLogo {
+    height: 11vh;
+    width : 100%;
+}
+
+/* contenu */
+
+section {
+    grid-row-start: 2;
+    width: 80vw;
+    margin: auto;
+}
+
+p {
+    font-family: 'Tangerine', cursive, sans-serif;
+    color: gold;
+    font-size: 1.8rem;
+}
+
+.teteP {
+    text-indent: 3rem;
+}
+
+.gras {
+    font-weight: bold;
+}
+
+/* tablettes */
+@media (min-width: 425px) {
+    p {
+        font-size: 2.7rem;
+    }
+}
+
+/*desktop*/
+@media (min-width: 1024px) {
+    p {
+        font-size: 3.2rem;
+    }
+}

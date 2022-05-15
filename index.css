@@ -15,6 +15,17 @@ body {
     height: 100vh;
 }
 
+header {
+    position: fixed;
+    top: 0px;
+    height: 11vh;
+    width: 100vw;
+    display: grid;
+    grid-template-rows: 50vh 50vh;
+    background-color: rgba(0, 0, 0, 1);
+    z-index: 500;
+}
+
 main {
     display: grid;
     grid-template-rows: 50vh 50vh;
@@ -117,6 +128,7 @@ section {
 p {
     font-family: 'Tangerine', cursive, sans-serif;
     color: gold;
+    text-shadow: 2px 2px black;
     font-size: 1.8rem;
 }
 

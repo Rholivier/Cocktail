@@ -6,7 +6,7 @@
 }
 
 body {
-    background-image: url(./assets/bg.jpg);
+    background-image: url(./assets/alcoolBg.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -149,59 +149,59 @@ nav > ul li:hover .sousmenu {
 /* PAVE SPECIFICITES */
 #p1 {
     grid-area: p1;
-    background-color: rgba(255, 0, 255, 0.7);
+    background-color: rgba(255, 0, 255, 0.9);
     border: 2px solid magenta;
 }
 
 #p2 {
     grid-area: p2;
-    background-color: rgba(0, 0, 255, 0.7);
+    background-color: rgba(0, 0, 255, 0.9);
     border: 2px solid blue;
 }
 
 #p3 {
     grid-area: p3;
-    background-color: rgba(0, 100, 0, 0.7);
+    background-color: rgba(0, 100, 0, 0.9);
     border: 2px solid darkgreen;
 }
 
 #p4 {
     grid-area: p4;
-    background-color: rgba(255, 20, 145, 0.7);
+    background-color: rgba(255, 20, 145, 0.9);
     border: 2px solid deeppink;
 }
 
 #p5 {
     grid-area: p5;
-    background-color: rgba(128, 0, 128, 0.7);
+    background-color: rgba(128, 0, 128, 0.9);
     border: 2px solid purple;
 }
 
 #p6 {
     grid-area: p6;
-    background-color: rgba(0, 0, 139, 0.7);
+    background-color: rgba(0, 0, 139, 0.9);
     border: 2px solid darkblue;
 }
 
 #p7 {
     grid-area: p7;
-    background-color: rgba(165, 42, 42, 0.7);
+    background-color: rgba(165, 42, 42, 0.9);
     border: 2px solid brown;
 }
 
 #p8 {
     grid-area: p8;
-    background-color: hsla(0, 100%, 50%, 0.7);
+    background-color: hsla(0, 100%, 50%, 0.9);
     border: 2px solid red;
 }
 
 #p9 {
     grid-area: p9;
-    background-color: rgba(47, 79, 79, 0.7);
+    background-color: rgba(47, 79, 79, 0.9);
     border: 2px solid darkslategray;
 }
 
-p, h3 {
+p, h1 {
     font-family: 'Tangerine', cursive, sans-serif;
     color: gold;
     text-shadow: 1px 1px black;
@@ -212,7 +212,7 @@ p {
     font-size: 1.8rem;
 }
 
-h3 {
+h1 {
     font-size: 2rem;
 }
 
@@ -221,23 +221,76 @@ h3 {
 
 
 /* RESPONSIVE TABLETS */
-/* @media (min-width: 425px) { */
-    @media (min-width: 426px) {
-        main {
-            padding-left: 5px;
-            padding-right: 5px;
-            display: grid;
-           grid-template-areas:
-                "p1 p2 p2 p3"
-                "p5 p2 p2 p4"
-                "p9 p9 p6 p4"
-                "p9 p9 p6 p7"
-                "p8 p8 p6 p7"
-        }
-        
-        .bg {
-            margin-left: 1vw;
-            margin-right: 1vw;
-        }
+@media (min-width: 425px) { 
+    main {
+        padding-left: 5px;
+        padding-right: 5px;
+        display: grid;
+        grid-template-areas:
+            "p1 p2 p2 p3"
+            "p5 p2 p2 p4"
+            "p9 p9 p6 p4"
+            "p9 p9 p6 p7"
+            "p8 p8 p6 p7"
+    }
 
-/* @media (min-width: 1024px) {} */
+    .bg {
+        margin-left: 1vw;
+        margin-right: 1vw;
+    }
+
+/* RESPONSIVE DESKTOPS */
+@media (min-width: 1024px) {
+    main {
+        display : initial;
+    }
+
+    .bg {
+        display:flex;
+    }
+
+    .paveImg {
+        display: flex;
+        align-items: stretch ;
+    }
+
+    .img {
+        width: 35vw;
+        height: auto;
+    }
+
+    .text {
+        margin-left: 5vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    #p1, #p3, #p5, #p7, #p9 {
+        margin-left: 15vw;
+        margin-right: 7vw;
+        padding-right: 7vw;
+    }
+
+    #p2, #p4, #p6, #p8 {
+        flex-direction: row-reverse;
+        margin-right: 15vw;
+        margin-left: 7vw;
+    }
+
+    #p2 .text, #p4 .text, #p6 .text, #p8 .text {
+        padding-right: 4vw;
+    }
+
+    #p1 {
+        margin-top: 12vh;
+    }
+
+    p {
+        font-size: 2rem;
+    }
+
+    h1 {
+        font-size: 2.4rem;
+    }
+}

@@ -1,12 +1,12 @@
-/* RESET */
+/*Reset*/
 * {
     box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    background-image: url(./assets/bg.jpg);
+    background-image: url(./assets/conseils.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -27,12 +27,11 @@ header {
 }
 
 main {
-    margin-top: 11vh;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 50vh 50vh;
 }
 
-/* NAVBAR */
+/* NavBar*/
 nav {
     display: inline-block;
     height: 15vh;
@@ -118,96 +117,38 @@ nav > ul li:hover .sousmenu {
     width : 100%;
 }
 
-/* CONTENU */
+/* contenu */
 
-
-/* PAVE GENERIQUE */
-.bg {
-    margin-left: 3vw;
-    margin-right: 3vw;
-    margin-top: 5vh;
-    border-radius: 10px;
-    padding: 10px;
-    z-index: 400;
+section {
+    grid-row-start: 2;
+    width: 80vw;
+    margin: auto;
 }
 
-.paveImg {
-    display: none;
-}
-
-.liste {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.recette {
-    margin-left: 5vw;
-    margin-bottom: 3vh;
-}
-
-/* PAVE SPECIFICITES */
-#p10 {
-    grid-area: p10;
-    background-color: rgba(0, 0, 255, 0.7);
-    border: 2px solid blue;
-}
-
-#p11 {
-    grid-area: p11;
-    background-color: rgba(0, 128, 0, 0.7);
-    border: 2px solid green;
-}
-
-#p12 {
-    grid-area: p12;
-    background-color: rgba(255, 0, 0, 0.7);
-    border: 2px solid red;
-}
-
-#p13 {
-    grid-area: p13;
-    background-color: rgba(165, 42, 42, 0.7);
-    border: 2px solid brown;
-}
-
-#p14 {
-    grid-area: p14;
-    background-color: rgba(128, 0, 128, 0.7);
-    border: 2px solid purple;
-}
-
-p, h3 {
+p {
     font-family: 'Tangerine', cursive, sans-serif;
     color: gold;
-    text-shadow: 1px 1px black;
-}
-
-/* TEXTES */
-p {
     font-size: 1.8rem;
 }
 
-h3 {
-    font-size: 2rem;
+.teteP {
+    text-indent: 3rem;
 }
 
+.gras {
+    font-weight: bold;
+}
 
-/* RESPONSIVE TABLETS */
-@media (min-width: 426px) {
-    main {
-        padding-left: 5px;
-        padding-right: 5px;
-        display: grid;
-       grid-template-areas:
-            "p13 p13 p10 p11"
-            "p13 p13 p10 p12"
-            "p14 p14 p14 p12"
+/* tablettes */
+@media (min-width: 425px) {
+    p {
+        font-size: 2.7rem;
     }
-    
-    .bg {
-        margin-left: 1vw;
-        margin-right: 1vw;
-    }
+}
 
-/* @media (min-width: 1024px) {}*/
+/*desktop*/
+@media (min-width: 1024px) {
+    p {
+        font-size: 3.2rem;
+    }
+}
