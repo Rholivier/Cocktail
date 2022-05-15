@@ -26,11 +26,6 @@ header {
     z-index: 500;
 }
 
-main {
-    display: grid;
-    grid-template-rows: 50vh 50vh;
-}
-
 /* NavBar*/
 nav {
     display: inline-block;
@@ -47,7 +42,7 @@ nav ul li {
     float: left;
     width: 30%;
     text-align: center;
-    background-color: rgba(255, 217, 0, 0.231);
+    background-color: rgba(17, 0, 255, 0.396);
     text-shadow: 2px 2px 2px black;
 }
 
@@ -119,20 +114,51 @@ nav > ul li:hover .sousmenu {
 
 /* contenu */
 
-section {
-    grid-row-start: 2;
-    width: 80vw;
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: auto;
+}
+
+.fondClair {
+    margin-top: 16vh;
+    height: 80vh;
+    width: 85vw;
+    max-width: 1000px;
+    background-color: rgba(0, 255, 255, 0.717);
+    background-attachment: fixed;
+    border-radius: 10px;
+    box-shadow: 0px 0px 30px rgba(0, 255, 255);
+    padding: 5vw;
+    overflow: scroll;
+}
+
+section {
+    margin-bottom: 12vh;
+    width: 75vw;
+    max-width: 950px;
+    justify-content: center;
+}
+
+.imageFlottante {
+    float: left;
+    height: 15vh;
+    width: auto;
 }
 
 p {
     font-family: 'Tangerine', cursive, sans-serif;
-    color: gold;
-    font-size: 1.8rem;
+    color: black;
+    font-size: 1.2rem;
+    max-width: 850px;
 }
 
-.teteP {
-    text-indent: 3rem;
+h1 {
+    font-family: 'Tangerine', cursive, sans-serif;
+    color:rgba(0, 0, 0, 1);
+    font-size: 1.8rem;
+    margin-bottom: 2vh;
 }
 
 .gras {
@@ -142,13 +168,25 @@ p {
 /* tablettes */
 @media (min-width: 425px) {
     p {
-        font-size: 2.7rem;
+        font-size: 1.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .imageFlottante {
+        height: 20vh;
     }
 }
 
 /*desktop*/
 @media (min-width: 1024px) {
     p {
-        font-size: 3.2rem;
+        font-size: 2rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
     }
 }

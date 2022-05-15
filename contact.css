@@ -26,11 +26,6 @@ header {
     z-index: 500;
 }
 
-main {
-    display: grid;
-    grid-template-rows: 50vh 50vh;
-}
-
 /* NavBar*/
 nav {
     display: inline-block;
@@ -119,16 +114,45 @@ nav > ul li:hover .sousmenu {
 
 /* contenu */
 
-section {
-    grid-row-start: 2;
-    width: 80vw;
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: auto;
+}
+
+.fondClair {
+    margin-top: 16vh;
+    height: 80vh;
+    width: 85vw;
+    background-color: rgba(0, 255, 255, 0.717);
+    background-attachment: fixed;
+    border-radius: 10px;
+    box-shadow: 0px 0px 30px rgba(0, 255, 255);
+    padding: 5vw;
+    overflow: scroll;
+}
+
+section {
+    margin-bottom: 12vh;
+    width: 75vw;
+    justify-content: center;
+}
+
+input, textarea {
+    width: 100%;
 }
 
 p {
     font-family: 'Tangerine', cursive, sans-serif;
-    color: gold;
+    color: black;
     font-size: 1.8rem;
+}
+
+h1, h2, .credits p {
+    font-family :'Times New Roman', Times, serif;
+    color:rgba(0, 0, 0, 1);
+    font-size: 1rem;
 }
 
 .teteP {
@@ -143,6 +167,10 @@ p {
 @media (min-width: 425px) {
     p {
         font-size: 2.7rem;
+    }
+
+    .formButtons {
+        display: flex;
     }
 }
 
