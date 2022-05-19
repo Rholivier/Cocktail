@@ -139,6 +139,11 @@ section {
     justify-content: center;
 }
 
+form {
+    display:flex;
+    flex-direction: column;
+}
+
 input, textarea {
     width: 100%;
 }
@@ -157,10 +162,6 @@ h1, h2, .credits p {
 
 .teteP {
     text-indent: 3rem;
-}
-
-.gras {
-    font-weight: bold;
 }
 
 /* tablettes */

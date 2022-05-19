@@ -105,7 +105,7 @@ nav > ul li:hover .sousmenu {
     top:0;
     right: 0;
     height: 10vh;
-    width : 33%;
+    width : 25%;
     position:fixed;
     background-image: url(./assets/imgLogo.png);
     background-repeat: no-repeat;
@@ -194,7 +194,7 @@ h1 {
 
 
 /* RESPONSIVE TABLETS */
-@media (min-width: 426px) {
+@media (min-width: 425px) {
     main {
         padding-left: 5px;
         padding-right: 5px;
@@ -209,6 +209,7 @@ h1 {
         margin-left: 1vw;
         margin-right: 1vw;
     }
+
 
 /* RESPONSIVE DESKTOPS */
 @media (min-width: 1024px) {

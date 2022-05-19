@@ -125,6 +125,11 @@ section {
     margin: auto;
 }
 
+form {
+    display:flex;
+    margin-bottom: 15px;
+}
+
 p {
     font-family: 'Tangerine', cursive, sans-serif;
     color: gold;
